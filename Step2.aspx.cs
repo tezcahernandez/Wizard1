@@ -17,8 +17,7 @@ public partial class Step2 : System.Web.UI.Page
     }
 
     [System.Web.Services.WebMethod]
-    public static string saveObject(Alumno obj, string opcion)
-    {
+    public static int saveObject(Alumno obj, string opcion, int id){
         conexion conn = new conexion();
         //var json = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
         XmlSerializer xmlAlumno = new XmlSerializer(typeof(Alumno));
@@ -34,9 +33,9 @@ public partial class Step2 : System.Web.UI.Page
         xmlWriter.Close();
         textWriter.Close();
 
-        if (conn.StoredProcedureAlumno(textWriter.ToString(), opcion)) return "El Objeto se ha insertado correctamente.";
-        else return "Error al tratar de guardar el Objecto.";
+        return conn.StoredProcedureAlumno(textWriter.ToString(), opcion, id);
     }
+
 }
 
 public partial class Alumno{

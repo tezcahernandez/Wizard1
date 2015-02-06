@@ -10,7 +10,10 @@
     <script src="JScripts/Global.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            var idAlumno;
+
             load();
+
             function load() {
                 $('.exito').hide();
             }
@@ -25,8 +28,10 @@
                 alumno.aPaterno = 'Perez'
                 alumno.aMaterno = 'Hernandez'
                 alumno.email = "juan@gmail.com"
-                var jObject = { obj: { nombre: alumno.nombre, aPaterno: alumno.aPaterno, aMaterno: alumno.aMaterno, email: alumno.email }, opcion:'insert' };
-
+                var jObject = { obj: { nombre: alumno.nombre, aPaterno: alumno.aPaterno, aMaterno: alumno.aMaterno, email: alumno.email }, opcion:'insert', id:'0' };
+                //var ObjectXml = { xml: '<Alumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><nombre></nombre><aPaterno>Perez</aPaterno><aMaterno>Hernandez</aMaterno><email>juan@gmail.com</email></Alumno>"' };
+                //contentType: "text/xml",
+                //data: {inputxml: escape('<test></test>') <- how to post xml structure correctly?}
                 $.ajax({
                     type: "POST",
                     url: "Step2.aspx/saveObject",
@@ -42,7 +47,12 @@
 
             function OnSuccess(response) {
                 $('.exito').show('slow');
-                $('.exito').html(response.d);
+                if (response.d == '0') {
+                    $('.exito').html("Error al tratar de guardar el Objeto");
+                } else {
+                    idAlumno = response.d;
+                    $('.exito').html("El Objeto se ha insertado correctamente.");
+                }
             }
         })
     </script>

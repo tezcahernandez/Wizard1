@@ -28,10 +28,7 @@
                 alumno.aPaterno = 'Perez'
                 alumno.aMaterno = 'Hernandez'
                 alumno.email = "juan@gmail.com"
-                var jObject = { obj: { nombre: alumno.nombre, aPaterno: alumno.aPaterno, aMaterno: alumno.aMaterno, email: alumno.email }, opcion:'insert', id:'0' };
-                //var ObjectXml = { xml: '<Alumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><nombre></nombre><aPaterno>Perez</aPaterno><aMaterno>Hernandez</aMaterno><email>juan@gmail.com</email></Alumno>"' };
-                //contentType: "text/xml",
-                //data: {inputxml: escape('<test></test>') <- how to post xml structure correctly?}
+                var jObject = { obj: { nombre: alumno.nombre, aPaterno: alumno.aPaterno, aMaterno: alumno.aMaterno, email: alumno.email }, opcion:'insert', id:'0' };                
                 $.ajax({
                     type: "POST",
                     url: "Step2.aspx/saveObject",

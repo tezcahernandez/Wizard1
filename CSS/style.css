@@ -1,0 +1,71 @@
+﻿.content1 {
+            width: 420px;
+            height: 350px;
+            border: 1px solid #808080;
+        }
+.center {
+    text-align:center;
+}
+        .cab {
+            width: 410px;
+            height: 30px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-right: 5px;
+            padding-left: 5px;
+            text-align: left;
+            background-color: #000;
+            color: white;
+            font-family: Tahoma;
+            font-size: 18px;
+        }
+
+        .body1 {
+            padding: 10px;
+            width: 420px;
+            height: 320px;
+            text-align: left;
+            font-family: Arial;
+            font-size: 14px;
+            font-style: normal;
+        }
+
+        input[type=text] {
+            font-size: 18px;
+            font-family: Tahoma;
+            font-style: inherit;
+        }
+
+        label {
+            font-style: inherit;
+            font: bold 14px;
+            padding-left: 5px;
+        }
+        .exito{
+			background: #b6ff00;
+			border: 0px solid #2A7F0F;
+			padding: 5px;
+			margin-bottom: 15px;
+			width: 410px;
+		}
+        .btnEnviar, .guardar {
+            font-size: 16px;
+            width: 125px;
+            height: 35px;
+            background-color: #17aa1f;
+            border: 1px solid #17aa1f;
+            font: bold;
+            color: white;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-right: 8px;
+            padding-left: 8px;
+            text-align: center;
+        }
+
+        .btnLimpiar {
+            color: black;
+        }
+
+        .cbutton {
+        }

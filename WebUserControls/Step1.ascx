@@ -1,41 +1,26 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Step1.ascx.cs" Inherits="WebUserControls_Step1" %>
 <div class="Step1">
+    <div>
+        <br />
+            <label>Nombre</label><br />
+        <input type="text" class="txtNombre" size="40" /><br />
+        <br />
 
-    <table>
-        <tr>
-            <th colspan="2">Registro de Alumno
-            </th>
-        </tr>
-        <tr>
-            <th colspan="2">
-                <input type="text" class="txtNombre" placeholder="Nombre"/>
-            </th>
-        </tr>
-        <tr>
-            <th colspan="2">
-                <input type="text" class="txtaPaterno" placeholder="Apellido Paterno" />
-            </th>
-        </tr>
-        <tr>
-            <th colspan="2">
-                <input type="text" class="txtaMaterno" placeholder="Apellido Materno" />
-            </th>
-        </tr>
-        <tr>
-            <th colspan="2">
-                <input type="text" class="txtEmail" placeholder="Email" />
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" value="Enviar" class="btnEnviar" />
+            <label>Apellido Paterno</label><br />
+        <input type="text" class="txtaPaterno" size="40" /><br />
+        <br />
 
-            </td>
-            <td>
-                <input type="button" id="btnLimpiar" value="Limpiar" />
-            </td>
-        </tr>
+            <label>Apellido Materno</label><br />
+        <input type="text" class="txtaMaterno" size="40" /><br />
+        <br />
 
-    </table>
+            <label>Email</label><br />
+        <input type="text" class="txtEmail" size="40" /><br />
+        <br />
+    </div>
+    <div class="center">
+        <input type="button" value="Guardar" class="btnEnviar" />
 
+        o <a href="#" class="btnLimpiar">Cancelar</a><br />
+    </div>
 </div>

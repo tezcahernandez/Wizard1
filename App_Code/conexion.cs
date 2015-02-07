@@ -40,18 +40,5 @@ public class conexion
         }
         return 0;
     }
-/*
-    public int getIdMax(){
-        using (SqlConnection sqlConnection = new SqlConnection(CadConnection))
-        {
-            using (SqlDataAdapter da = new SqlDataAdapter("select max(IdObject) from tblObject", sqlConnection))
-            {
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                return (int) dt.Rows[0][0];
-            }
-            
-        }
-    }
- */
+
 }

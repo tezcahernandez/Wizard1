@@ -38,9 +38,9 @@ public partial class Step2 : System.Web.UI.Page
 
 }
 
-public partial class Alumno{
+/*public partial class Alumno{
     public string nombre { get; set; }
     public string aPaterno { get; set; }
     public string aMaterno { get; set; }
     public string email { get; set; }
-}
+}*/

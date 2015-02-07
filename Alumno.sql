@@ -1,7 +1,7 @@
 create table tblObject
 (
-IdObject int not null primary key key identity (1,1),
-Object nvarchar(max) null
+IdObject int not null primary key identity (1,1),
+Object xml null
 )
 create table tblAlumno
 (
